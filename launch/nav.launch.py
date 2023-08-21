@@ -14,7 +14,7 @@ def generate_launch_description():
     pkg_path = get_package_share_directory("gazebo_garden_simulation_example")
     nav2_bringup_path = get_package_share_directory("nav2_bringup")
 
-    slam = IncludeLaunchDescription(
+    nav = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(nav2_bringup_path, "launch", "bringup_launch.py"),
         ),
@@ -25,4 +25,4 @@ def generate_launch_description():
         }.items(),
     )
 
-    return LaunchDescription([slam])
+    return LaunchDescription([nav])
